@@ -1,0 +1,89 @@
+body{
+	background-color:#1f2d33;
+}
+h1{
+    color: #dadada;
+    text-align: center;
+    font-family: arial;
+    text-shadow: 1px 1px 15px black;
+   }
+.container{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3%;
+}
+.tabela{
+    font-family: arial;
+    color: white;
+    margin-top: 9px;
+    width: 92%;
+   
+}
+th{
+	border-bottom: 1px solid white;
+}
+tr .head{
+ margin-top: 10px;
+}
+.content{
+	background-color: #2196F3;
+    padding: 32px;
+    width: 287px;
+    border-radius: 3%;
+    
+}
+form{
+	font-family: arial;
+    color: white;
+}
+.caixa{
+
+    border: none;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 283px;
+    border-radius: 2px;
+    padding: 4px 4px 3px 8px;
+    border-bottom: 1px solid white;
+    background-color: #2196F3;
+    color: white;
+    font-size: 17px;;
+    
+}
+.nasc{
+	border: none;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 129px;
+    border-radius: 2px;
+    padding: 4px 4px 3px 8px;
+    border-bottom: 1px solid white;
+    background-color: #2196F3;
+    color: white;
+    font-size: 17px;
+}
+fieldset{
+	    border: none;
+}
+.buttonsend{
+    border: none;
+    height: 35px;
+    width: 71px;
+    border-radius: 8px;
+    text-align: center;
+    background: #58cc5d;
+    color: white;
+    font-size: 18px;
+}
+.buttonsend:focus{
+	box-shadow: inset 0px 0px 7px 0px black;
+
+}
+.button{
+	text-align: right;
+}

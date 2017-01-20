@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Raphael/Inicio</title>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header>
+<h1>Recuperação de senhas</h1>
+</header>
+<div class="container">
+
+	<div class="content">
+
+		<form method="get" action="dates/cadastro.php">
+			Nome <br/><input type="text" class="caixa" name="nome" autocomplete="off" /><br/>
+			Matricula<br><input type="text" class="caixa" name="matricula" autocomplete="off"/><br>
+			Cargo<br>
+			<input type="text" class="caixa" name="cargo" autocomplete="off"/><br> 
+			Setor<br>
+			<input type="text" class="caixa" name="setor" autocomplete="off"/><br>
+			Email<br>
+			<input type="email" class="caixa" name="email" autocomplete="off"/><br>
+			Ano de Nascimento<br/>
+			<input type="year" class="nasc" name="nasc" autocomplete="off" >
+
+			<fieldset><legend>Sexo</legend>
+			<input type="radio" name ="sexo" id="masc" checked value="Masculino"/>
+				<label for="masc">Masculino</label><br>
+			<input type="radio" name="sexo" id="fem" value="Femenino"/>
+				<label for="fem">Feminino</label>
+				
+			</fieldset><br>
+			<div class="button">
+			<input type="submit" class="buttonsend" value="Enviar">
+			</div>
+		</form>
+	</div>
+</div>	
+
+</body>
+</html>
