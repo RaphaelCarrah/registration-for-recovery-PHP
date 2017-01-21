@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<title>Raphael/Cadastro</title><link rel="stylesheet" href="../css/style.css">
@@ -7,14 +7,28 @@
 <body>
 
 	<?php 
-		$nome = isset($_GET["nome"])?$_GET["nome"]:"[Não informado]";
+		 
+		$nome = $_GET["nome"];
 		$sexo = $_GET["sexo"];
 		$nasc = $_GET["nasc"];
 		$idade = date("Y") - $nasc;
 		$matricula = $_GET["matricula"];
 		$setor = $_GET["setor"];
 		$cargo = $_GET["cargo"];
-		$email = $_GET["email"];	
+		$email = $_GET["email"];
+
+		$strcon = mysql_connect('localhost','root','ti310915#') or die('Erro verificar, contactar suporte');	
+		header('Content-Type: text/html; charset=utf-8');
+		mysql_query("SET NAMES 'utf8'");
+		mysql_query('SET character_set_connection=utf8');
+		mysql_query('SET character_set_client=utf8');
+		mysql_query('SET character_set_results=utf8');
+		$sql = "INSERT INTO usuarios(nome,cargo,setor,matricula,sexo,email,nasc) VALUES ('$nome','$cargo','$setor','$matricula','$sexo','$email','$nasc')";
+		utf8_encode($sql);
+		
+		mysql_db_query('solicitacao_cadastro', $sql,$strcon) or die ("Não foi possivel registrar");
+		mysql_close($strcon);
+		echo "Chamado registrado";
 	 ?>
 	<div class="container">
 	 <table class="tabela">
