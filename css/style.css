@@ -59,7 +59,7 @@ form{
     height: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 129px;
+    width: 95px;
     border-radius: 2px;
     padding: 4px 4px 3px 8px;
     border-bottom: 1px solid white;
@@ -86,4 +86,13 @@ fieldset{
 }
 .button{
 	text-align: right;
+}
+.car{
+    border: none;
+    background-color: #2196f3;
+    color: white;
+    margin: 9px 1px 21px -1px;
+    border-bottom: 1px solid white;
+    height: 35px;
+    width: 294px;
 }

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>Raphael/Inicio</title>
+	<meta http-equiv="pragma" content="no-cache">
 	<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
@@ -17,9 +18,25 @@
 			Nome <br/><input type="text" class="caixa" name="nome" autocomplete="off" /><br/>
 			Matricula<br><input type="text" class="caixa" name="matricula" autocomplete="off"/><br>
 			Cargo<br>
-			<input type="text" class="caixa" name="cargo" autocomplete="off"/><br> 
+			<select name="cargo" class="car">
+				<option disabled selected>Selecione um cargo</option>
+				<option value="Administrativo">Administrativo</option>
+				<option value="Coordenador de Serviços Terceirizados">Coordenador de Serviços Terceirizados</option>
+				<option value="Coordenador">Coordenador</option>
+				<option value="Supervisor de Apoio a Gestão">Supervisor de Apoio a Gestão</option>
+				  
+			</select><br> 
 			Setor<br>
-			<input type="text" class="caixa" name="setor" autocomplete="off"/><br>
+			<select name="setor" class="car">
+				<option disabled selected>Selecione um setor</option>
+				<option value="Informática">Informática</option>
+				<option value="Coordenadoria Financeira">Coordenadoria Financeira</option>
+				<option value="Financeiro">Financeiro</option>
+				<option value="Juridíco">Juridíco</option>
+				<option value="Recursos Humanos">Recursos Humanos</option>
+				<option value="Gabinete">Gabinete</option>
+				  
+			</select><br> 
 			Email<br>
 			<input type="email" class="caixa" name="email" autocomplete="off"/><br>
 			Ano de Nascimento<br/>
