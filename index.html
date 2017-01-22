@@ -7,9 +7,7 @@
 	<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<header>
-<h1>Recuperação de senhas</h1>
-</header>
+
 <div class="container">
 
 	<div class="content">
@@ -24,8 +22,11 @@
 				<option value="Coordenador de Serviços Terceirizados">Coordenador de Serviços Terceirizados</option>
 				<option value="Coordenador">Coordenador</option>
 				<option value="Supervisor de Apoio a Gestão">Supervisor de Apoio a Gestão</option>
+				<option value="Serviços gerais">Serviços gerais</option>
+				<option value="Educador Social">Educador Social</option>
 				  
 			</select><br> 
+			
 			Setor<br>
 			<select name="setor" class="car">
 				<option disabled selected>Selecione um setor</option>
@@ -33,12 +34,19 @@
 				<option value="Coordenadoria Financeira">Coordenadoria Financeira</option>
 				<option value="Financeiro">Financeiro</option>
 				<option value="Juridíco">Juridíco</option>
-				<option value="Recursos Humanos">Recursos Humanos</option>
+				<option value="Protocolo">Protocolo</option>
 				<option value="Gabinete">Gabinete</option>
-				  
+				<option value="Diversidade">Coordenadoria de Mulheres</option>
+				<option value="Diversidade">Coordenadoria do Idoso</option>
+				<option value="Diversidade">Coordenadoria da Diversidade Racial</option>
+				<option value="Diversidade">Desenvolvimento Humano</option>
+				<option value="Diversidade">Contratos</option>
+				<option value="Diversidade">Comunicação</option>
 			</select><br> 
+				  
 			Email<br>
 			<input type="email" class="caixa" name="email" autocomplete="off"/><br>
+			
 			Ano de Nascimento<br/>
 			<input type="year" class="nasc" name="nasc" autocomplete="off" >
 
@@ -47,11 +55,13 @@
 				<label for="masc">Masculino</label><br>
 			<input type="radio" name="sexo" id="fem" value="Femenino"/>
 				<label for="fem">Feminino</label>
-				
 			</fieldset><br>
+			
 			<div class="button">
-			<input type="submit" class="buttonsend" value="Enviar">
+			<input type="submit" class="buttonsend" value="Cadastrar">
 			</div>
+
+			<a href="dates/exibir.php" class="exibir">Exibir Cadastros</a>
 		</form>
 	</div>
 </div>	

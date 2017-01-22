@@ -73,7 +73,7 @@ fieldset{
 .buttonsend{
     border: none;
     height: 35px;
-    width: 71px;
+    width: 106px;
     border-radius: 8px;
     text-align: center;
     background: #58cc5d;
@@ -95,4 +95,9 @@ fieldset{
     border-bottom: 1px solid white;
     height: 35px;
     width: 294px;
+}
+.exibir{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
