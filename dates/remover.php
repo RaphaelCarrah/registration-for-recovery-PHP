@@ -30,12 +30,12 @@
 		  if($res){  
 		      echo "<h1>Usuario $name foi excluído com sucesso.</h1>";
 		  }else{  
-		      echo "<h1>Tem certeza que este item está listado?</h1>";
+		      echo "<h1>Tem certeza que $name este item está listado?</h1>";
 		  }
 ?>
 		<div class="container">
 			<div class="content">
-				<div class="button">
+				<div class="buttonmargin">
 					<a href="apagar.php"><button  class="button2"  >Voltar</button></a>
 
 				</div>

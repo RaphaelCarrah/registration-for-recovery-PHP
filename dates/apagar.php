@@ -57,7 +57,7 @@
 				<th>
 					<form method="get"  action="remover.php">
 						<input type="radio" checked name="name" value="<?=$linha['nome']?>"/>
-						<button type="submit" name="id" class="buttondelete" value="<?=$linha['ID']?>">
+						<button type="submit" name="id" class="buttondelete" onclick="alert('Você tem certeza que deseja apagar?')" value="<?=$linha['ID']?>">
 							<i class="fa fa-trash" aria-hidden="true"></i>
 						</button>
 					</form>				
@@ -74,7 +74,7 @@
 	 </table>
 	 </div>
 	 <br><br>
-				<div class="button">
+				<div class="buttonmargin">
 					<a href="../index.html"><button  class="button2"  >Voltar</button></a>
 
 				</div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Raphael/Inicio</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="content">
+
+		<form method="get"  action="dates/cadastro.php">
+			Nome <br/><input type="text" class="caixa" name="nome" autocomplete="off" /><br/>
+			Matricula<br><input type="text" class="caixa" name="matricula" autocomplete="off"/><br>
+			Cargo<br>
+			<select name="cargo" class="car">
+				<option disabled selected>Selecione um cargo</option>
+				<option value="Administrativo">Administrativo</option>
+				<option value="Coordenador de Serviços Terceirizados">Coordenador de Serviços Terceirizados</option>
+				<option value="Coordenador">Coordenador</option>
+				<option value="Supervisor de Apoio a Gestão">Supervisor de Apoio a Gestão</option>
+				<option value="Serviços gerais">Serviços gerais</option>
+				<option value="Educador Social">Educador Social</option>
+				  
+			</select><br> 
+			
+			Setor<br>
+			<select name="setor" class="car">
+				<option disabled selected>Selecione um setor</option>
+				<option value="Informática">Informática</option>
+				<option value="Coordenadoria Financeira">Coordenadoria Financeira</option>
+				<option value="Financeiro">Financeiro</option>
+				<option value="Juridíco">Juridíco</option>
+				<option value="Protocolo">Protocolo</option>
+				<option value="Gabinete">Gabinete</option>
+				<option value="Diversidade">Coordenadoria de Mulheres</option>
+				<option value="Diversidade">Coordenadoria do Idoso</option>
+				<option value="Diversidade">Coordenadoria da Diversidade Racial</option>
+				<option value="Diversidade">Desenvolvimento Humano</option>
+				<option value="Diversidade">Contratos</option>
+				<option value="Diversidade">Comunicação</option>
+			</select><br> 
+				  
+			Email<br>
+			<input type="email" class="caixa" name="email" autocomplete="off"/><br>
+			
+			Ano de Nascimento<br/>
+			<input type="year" class="nasc" name="nasc" autocomplete="off" >
+
+			<fieldset><legend>Sexo</legend>
+			<input type="radio" name ="sexo" id="masc" checked value="Masculino"/>
+				<label for="masc">Masculino</label><br>
+			<input type="radio" name="sexo" id="fem" value="Femenino"/>
+				<label for="fem">Feminino</label>
+			</fieldset><br>
+
+
+			<div class="button">
+				<input type="submit" class="buttonsend" value="Cadastrar">
+			</div>
+						
+		</form>
+			<a href="index.html"><button  class="button3"  >Voltar</button></a>
+			
+			
+	</div>
+</div>	
+
+</body>
+</html>

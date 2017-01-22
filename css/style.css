@@ -2,10 +2,9 @@ body{
 	background-color:#1f2d33;
 }
 h1{
-    color: #dadada;
+    color: #ffffff;
     text-align: center;
     font-family: arial;
-    text-shadow: 1px 1px 15px black;
    }
 .container{
     align-items: center;
@@ -33,6 +32,13 @@ tr .head{
     padding: 28px;
     width: 299px;
     
+}
+.contentph{
+    
+    padding: 28px;
+    width: 800px;
+    text-align: center;
+    margin-top: 143px;
 }
 form{
 	font-family: arial;
@@ -100,6 +106,17 @@ fieldset{
     box-shadow: inset 0px 0px 7px 0px black;
 
 }
+.button3{
+   border: none;
+    height: 27px;
+    width: 71px;
+    border-radius: 8px;
+    text-align: center;
+    background: #FF9800;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 .buttondelete{
     border: none;
     height: 39px;
@@ -119,6 +136,12 @@ fieldset{
 }
 .button{
 	text-align: right;
+
+}
+.buttonmargin{
+    text-align: right;
+    margin-right: 50px; 
+
 }
 .car{
     border: none;

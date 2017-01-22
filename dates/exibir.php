@@ -65,7 +65,7 @@
 	 </table>
 	 </div>
 	 <br><br>
-	 <div class="button">
+	 <div class="buttonmargin">
 
 	 <input type="button" class="button2" value="Voltar" onClick="history.go(-1)"> 
 	
