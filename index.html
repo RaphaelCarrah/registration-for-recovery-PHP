@@ -5,6 +5,7 @@
 	<title>Raphael/Inicio</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<link rel="stylesheet" href="css/style.css"/>
+
 </head>
 <body>
 
@@ -12,7 +13,7 @@
 
 	<div class="content">
 
-		<form method="get" action="dates/cadastro.php">
+		<form method="get"  action="dates/cadastro.php">
 			Nome <br/><input type="text" class="caixa" name="nome" autocomplete="off" /><br/>
 			Matricula<br><input type="text" class="caixa" name="matricula" autocomplete="off"/><br>
 			Cargo<br>
@@ -56,13 +57,20 @@
 			<input type="radio" name="sexo" id="fem" value="Femenino"/>
 				<label for="fem">Feminino</label>
 			</fieldset><br>
-			
+
+
 			<div class="button">
 			<input type="submit" class="buttonsend" value="Cadastrar">
 			</div>
-
-			<a href="dates/exibir.php" class="exibir">Exibir Cadastros</a>
+						
 		</form>
+
+			<div class="button">
+				<a href="dates/exibir.php"><button  class="button2"  >Solicitações</button></a>
+			</div>
+			<div class="button">
+				<a href="dates/apagar.php"><button  class="buttonexcluir"  >Excluir</button></a>
+			</div>	
 	</div>
 </div>	
 

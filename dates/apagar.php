@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Cadastro - PHP</title>
 	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="..css/font-awesome.css">
+	<link rel="stylesheet" href="../css/font-awesome.css">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 
 		
 		
-		$query = "SELECT nome, cargo, setor,matricula,sexo,email,nasc FROM usuarios";
+		$query = "SELECT ID, nome, cargo, setor,matricula,sexo,email,nasc FROM usuarios";
 		mysql_db_query('solicitacao_cadastro', $query,$strcon) or die ("Não foi possivel registrar");
 		$dados = mysql_query($query, $strcon) or die(mysql_error());
 		$linha = mysql_fetch_assoc($dados);
@@ -31,13 +31,14 @@
 	<div class="container">
 	 <table class="tabela">
 	 	 	<tr>
+	 	 	
 	 		<th>Nome</th>
 	 		<th>Cargo</th>
 	 		<th>Setor</th>
 	 		<th>Matricula</th>
 	 		<th>Sexo</th>
 	 		<th>Email</th>
-	 		<th>Idade</th>
+	 		<th>Ação</th>
 	 	</tr>
 	 	
 <?php
@@ -45,15 +46,23 @@
 	if($total > 0) {
 
 		do {
-?>			<tr>
-			<th><?=$linha['nome']?></th>
-			<th><?=$linha['cargo']?></th>
-			<th><?=$linha['setor']?></th>
-			<th><?=$linha['matricula']?></th>
-			<th><?=$linha['sexo']?></th>
-			<th><?=$linha['email']?></th>
-			<th><?=date("Y") - $linha['nasc']  ?></th>
-			 </tr>
+?>			<tr >
+				
+				<th><?=$linha['nome']?></th>
+				<th><?=$linha['cargo']?></th>
+				<th><?=$linha['setor']?></th>
+				<th><?=$linha['matricula']?></th>
+				<th><?=$linha['sexo']?></th>
+				<th><?=$linha['email']?></th>
+				<th>
+					<form method="get"  action="remover.php">
+						<input type="radio" checked name="name" value="<?=$linha['nome']?>"/>
+						<button type="submit" name="id" class="buttondelete" value="<?=$linha['ID']?>">
+							<i class="fa fa-trash" aria-hidden="true"></i>
+						</button>
+					</form>				
+				</th>
+			</tr>
 <?php
 		// finaliza o loop que vai mostrar os dados
 		}while($linha = mysql_fetch_assoc($dados));
@@ -65,11 +74,10 @@
 	 </table>
 	 </div>
 	 <br><br>
-	 <div class="button">
+				<div class="button">
+					<a href="../index.html"><button  class="button2"  >Voltar</button></a>
 
-	 <input type="button" class="button2" value="Voltar" onClick="history.go(-1)"> 
-	
-	</div> 
+				</div>
 	 
 	 
 </body>

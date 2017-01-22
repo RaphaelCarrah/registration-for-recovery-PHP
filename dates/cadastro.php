@@ -2,7 +2,8 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>Raphael/Cadastro</title><link rel="stylesheet" href="../css/style.css">
+	<title>Raphael/Cadastro</title>
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -61,7 +62,7 @@
 
 	 <br><br>
 	 <div class="button">
-	 <input type="button" class="buttonsend" value="Voltar" onClick="history.go(-1)"> 
+	 <input type="button" class="button2" value="Voltar" onClick="history.go(-1)"> 
 	
 	</div> 
 	 
