@@ -5,6 +5,7 @@
 	<title>Cadastro - PHP</title>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/font-awesome.css">
+	<link rel="stylesheet" href="../css/tabelas.css">
 </head>
 <body>
 
@@ -20,7 +21,7 @@
 
 		
 		
-		$query = "SELECT ID, nome, cargo, setor,matricula,sexo,email,nasc FROM usuarios";
+		$query = "SELECT ID, nome, cargo, setor,matricula,tipo,email,nasc FROM usuarios";
 		mysql_db_query('solicitacao_cadastro', $query,$strcon) or die ("Não foi possivel registrar");
 		$dados = mysql_query($query, $strcon) or die(mysql_error());
 		$linha = mysql_fetch_assoc($dados);
@@ -32,13 +33,14 @@
 	 <table class="tabela">
 	 	 	<tr>
 	 	 	
-	 		<th>Nome</th>
-	 		<th>Cargo</th>
-	 		<th>Setor</th>
-	 		<th>Matricula</th>
-	 		<th>Sexo</th>
-	 		<th>Email</th>
-	 		<th>Ação</th>
+	 		<th>NOME</th>
+	 		<th>CARGO</th>
+	 		<th>SETOR</th>
+			<th>EMAIL</th>
+	 		<th>MATRICULA</th>
+	 		<th colspan="2">AÇÃO</th>
+
+
 	 	</tr>
 	 	
 <?php
@@ -51,17 +53,29 @@
 				<th><?=$linha['nome']?></th>
 				<th><?=$linha['cargo']?></th>
 				<th><?=$linha['setor']?></th>
-				<th><?=$linha['matricula']?></th>
-				<th><?=$linha['sexo']?></th>
 				<th><?=$linha['email']?></th>
+				<th><?=$linha['matricula']?></th>
 				<th>
 					<form method="get"  action="remover.php">
-						<input type="radio" checked name="name" value="<?=$linha['nome']?>"/>
+						<input type="radio" class="hide" checked name="linha" value="<?=$linha?>"/>
 						<button type="submit" name="id" class="buttondelete" onclick="alert('Você tem certeza que deseja apagar?')" value="<?=$linha['ID']?>">
 							<i class="fa fa-trash" aria-hidden="true"></i>
 						</button>
-					</form>				
+					</form>	
+
 				</th>
+				<th>					
+					<form method="get"  action="email.php">
+						<input type="radio" class="hide" checked name="name" value="<?=$linha['nome']?>"/>
+						<input type="radio" class="hide" checked name="cargo" value="<?=$linha['cargo']?>"/>
+						<input type="radio" class="hide" checked name="email" value="<?=$linha['email']?>"/>
+						<input type="radio" class="hide" checked name="matricula" value="<?=$linha['matricula']?>"/>
+						<input type="radio" class="hide" checked name="setor" value="<?=$linha['setor']?>"/>
+						
+						<button type="submit" name="cargo" class="buttonmail" value="<?=$linha['cargo']?>">
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						</button>
+					</form>	</th>
 			</tr>
 <?php
 		// finaliza o loop que vai mostrar os dados

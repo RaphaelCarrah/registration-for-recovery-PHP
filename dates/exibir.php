@@ -20,7 +20,7 @@
 
 		
 		
-		$query = "SELECT nome, cargo, setor,matricula,sexo,email,nasc FROM usuarios";
+		$query = "SELECT nome, cargo, setor,matricula,tipo,email,nasc FROM usuarios";
 		mysql_db_query('solicitacao_cadastro', $query,$strcon) or die ("Não foi possivel registrar");
 		$dados = mysql_query($query, $strcon) or die(mysql_error());
 		$linha = mysql_fetch_assoc($dados);
@@ -28,16 +28,17 @@
 
 	
 ?>
+
 	<div class="container">
 	 <table class="tabela">
 	 	 	<tr>
-	 		<th>Nome</th>
-	 		<th>Cargo</th>
-	 		<th>Setor</th>
-	 		<th>Matricula</th>
-	 		<th>Sexo</th>
-	 		<th>Email</th>
-	 		<th>Idade</th>
+	 		<th>NOME</th>
+	 		<th>CARGO</th>
+	 		<th>SETOR</th>
+	 		<th>MATRICULA</th>
+	 		<th>TIPO</th>
+	 		<th>EMAIL</th>
+	 		<th>IDADE</th>
 	 	</tr>
 	 	
 <?php
@@ -50,7 +51,7 @@
 			<th><?=$linha['cargo']?></th>
 			<th><?=$linha['setor']?></th>
 			<th><?=$linha['matricula']?></th>
-			<th><?=$linha['sexo']?></th>
+			<th><?=$linha['tipo']?></th>
 			<th><?=$linha['email']?></th>
 			<th><?=date("Y") - $linha['nasc']  ?></th>
 			 </tr>

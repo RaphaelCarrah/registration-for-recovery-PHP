@@ -15,7 +15,7 @@
 
 		<form method="get"  action="dates/cadastro.php">
 			Nome <br/><input type="text" class="caixa" name="nome" autocomplete="off" /><br/>
-			Matricula<br><input type="text" class="caixa" name="matricula" autocomplete="off"/><br>
+			Matricula<br><input type="text" class="caixa" name="matricula" maxlength="5" autocomplete="off"/><br>
 			Cargo<br>
 			<select name="cargo" class="car">
 				<option disabled selected>Selecione um cargo</option>
@@ -49,13 +49,13 @@
 			<input type="email" class="caixa" name="email" autocomplete="off"/><br>
 			
 			Ano de Nascimento<br/>
-			<input type="year" class="nasc" name="nasc" autocomplete="off" >
+			<input type="year" class="nasc" name="nasc" maxlength="4" autocomplete="off" >
 
-			<fieldset><legend>Sexo</legend>
-			<input type="radio" name ="sexo" id="masc" checked value="Masculino"/>
-				<label for="masc">Masculino</label><br>
-			<input type="radio" name="sexo" id="fem" value="Femenino"/>
-				<label for="fem">Feminino</label>
+			<fieldset><legend>Tipo</legend>
+			<input type="radio" name ="tipo" id="comi" checked value="Comissionado"/>
+				<label for="comi">Comissionado</label><br>
+			<input type="radio" name="tipo" id="terc" value="Terceirizado"/>
+				<label for="terc">Terceirizado</label>
 			</fieldset><br>
 
 

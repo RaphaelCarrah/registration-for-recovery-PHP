@@ -3,7 +3,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>Cadastro - PHP</title>
+	<title>Excluir</title>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/font-awesome.css">
 </head>
@@ -22,7 +22,7 @@
 		
 		
 		  $id = $_GET['id'];
-		  $name = $_GET['name'];
+		  $name = isset($_GET['name']) ;
 		  $query = "DELETE from usuarios where id =".$id;  
 		 
 		  $res   = mysql_db_query('solicitacao_cadastro',$query, $strcon)or die(mysql_error());
