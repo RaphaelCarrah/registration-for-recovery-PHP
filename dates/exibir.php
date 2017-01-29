@@ -47,13 +47,13 @@
 
 		do {
 ?>			<tr>
-			<th><?=$linha['nome']?></th>
-			<th><?=$linha['cargo']?></th>
-			<th><?=$linha['setor']?></th>
-			<th><?=$linha['matricula']?></th>
-			<th><?=$linha['tipo']?></th>
-			<th><?=$linha['email']?></th>
-			<th><?=date("Y") - $linha['nasc']  ?></th>
+			<th class="ui-widget-content"><?=$linha['noPhelme']?></th>
+			<th class="ui-widget-content"><?=$linha['cargo']?></th>
+			<th class="ui-widget-content"><?=$linha['setor']?></th>
+			<th class="ui-widget-content"><?=$linha['matricula']?></th>
+			<th class="ui-widget-content"><?=$linha['tipo']?></th>
+			<th class="ui-widget-content"><?=$linha['email']?></th>
+			<th class="ui-widget-content"><?=date("Y") - $linha['nasc']  ?></th>
 			 </tr>
 <?php
 		// finaliza o loop que vai mostrar os dados
