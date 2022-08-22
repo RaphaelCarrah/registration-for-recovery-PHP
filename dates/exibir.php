@@ -10,7 +10,7 @@
 
 	<?php 
 
-		$strcon = mysql_connect('localhost','root','ti310915#') or die('Erro verificar, contactar suporte');	
+		$strcon = mysql_connect() or die('Erro verificar, contactar suporte');	
 		header('Content-Type: text/html; charset=utf-8');
 
 		mysql_query("SET NAMES 'utf8'");
